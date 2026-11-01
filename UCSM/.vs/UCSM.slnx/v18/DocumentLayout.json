@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE129CFC-8C94-4292-A3B6-BDA3E7557469}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\views\\cafeteria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE129CFC-8C94-4292-A3B6-BDA3E7557469}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\views\\cafeteria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE129CFC-8C94-4292-A3B6-BDA3E7557469}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\controllers\\cafeteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE129CFC-8C94-4292-A3B6-BDA3E7557469}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\controllers\\cafeteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Cafeteria\\index.cshtml",
+              "RelativeDocumentMoniker": "UCSM\\Views\\Cafeteria\\index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Cafeteria\\index.cshtml*",
+              "RelativeToolTip": "UCSM\\Views\\Cafeteria\\index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-01T11:08:12.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CafeteriaController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\CafeteriaController.cs",
+              "RelativeDocumentMoniker": "UCSM\\Controllers\\CafeteriaController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\CafeteriaController.cs",
+              "RelativeToolTip": "UCSM\\Controllers\\CafeteriaController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-01T11:07:33.51Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
