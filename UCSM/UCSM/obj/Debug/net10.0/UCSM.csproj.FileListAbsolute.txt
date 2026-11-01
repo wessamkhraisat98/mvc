@@ -97,3 +97,4 @@ C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.pdb
 C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.genruntimeconfig.cache
 C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\ref\UCSM.dll
 C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.csproj.Up2Date
+C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.sourcelink.json

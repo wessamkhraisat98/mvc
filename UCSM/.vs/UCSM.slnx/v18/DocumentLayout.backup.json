@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\controllers\\cafeteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\controllers\\cafeteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\views\\cafeteria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\views\\cafeteria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "UCSM\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "UCSM\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAIwCIAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-01T11:18:07.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Program.cs",
+              "RelativeDocumentMoniker": "UCSM\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Program.cs",
+              "RelativeToolTip": "UCSM\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-01T11:17:33.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Cafeteria\\index.cshtml",
+              "RelativeDocumentMoniker": "UCSM\\Views\\Cafeteria\\index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Cafeteria\\index.cshtml",
+              "RelativeToolTip": "UCSM\\Views\\Cafeteria\\index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-01T11:08:12.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CafeteriaController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\CafeteriaController.cs",
+              "RelativeDocumentMoniker": "UCSM\\Controllers\\CafeteriaController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\CafeteriaController.cs",
+              "RelativeToolTip": "UCSM\\Controllers\\CafeteriaController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-01T11:07:33.51Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
