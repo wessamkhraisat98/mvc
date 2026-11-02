@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - University Cafeteria</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Cafeteria" asp-action="Index">University Cafeteria</a>
+                <div class="navbar-nav">
+                    <a class="nav-link" asp-controller="Cafeteria" asp-action="Index">Home</a>
+                    <a class="nav-link" asp-controller="Cafeteria" asp-action="Products">Products</a>
+                    <a class="nav-link" asp-controller="Cafeteria" asp-action="Suppliers">Suppliers</a>
+                    <a class="nav-link" asp-controller="Cafeteria" asp-action="SupplyStatus">Supply Status</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-4">
+        @RenderBody()
+    </main>
+    <footer class="border-top py-3 text-center text-muted">
+        <div class="container">&copy; 2026 University Cafeteria</div>
+    </footer>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

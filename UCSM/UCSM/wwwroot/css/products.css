@@ -1,0 +1,18 @@
+body {
+    background-color: #f3f8f3;
+}
+
+h1 {
+    color: #176b3a;
+}
+
+ul {
+    padding: 1rem 1rem 1rem 2.5rem;
+    background-color: #ffffff;
+    border-left: 4px solid #198754;
+    max-width: 32rem;
+}
+
+li {
+    padding: 0.35rem 0;
+}

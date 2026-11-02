@@ -1,8 +1,13 @@
 @{
-    ViewData["Title"] = "Cafeteria Home";
+    ViewData["Title"] = "Home";
+    string universityName = "Orange University";
+    string managerName = "Ahmad Ali";
+    int totalProducts = 5;
 }
 <h1>University Cafeteria Supply Management</h1>
-<p>Welcome to the cafeteria supply management system.</p>
+<p>Welcome to @universityName cafeteria supply management system.</p>
+<p>Manager: @managerName</p>
+<p>Total products: @totalProducts</p>
 <ul>
     <li><a asp-controller="Cafeteria" asp-action="Products">View Products</a></li>
     <li><a asp-controller="Cafeteria" asp-action="Suppliers">View Suppliers</a></li>

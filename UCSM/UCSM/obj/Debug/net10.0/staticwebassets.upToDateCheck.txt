@@ -1,3 +1,4 @@
+wwwroot\css\products.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
@@ -123,3 +124,4 @@ C:\Users\user\Desktop\mvc\UCSM\UCSM\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\user\Desktop\mvc\UCSM\UCSM\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\user\Desktop\mvc\UCSM\UCSM\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\user\Desktop\mvc\UCSM\UCSM\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\user\Desktop\mvc\UCSM\UCSM\wwwroot\css\products.css
