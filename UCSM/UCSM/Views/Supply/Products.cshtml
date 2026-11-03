@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = ViewData["Title"] ?? "Cafeteria Products";
+    string[] products = (string[])ViewData["Products"]!;
+}
+<h1 class="h2 fw-bold mb-4">@ViewData["Title"]</h1>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <div class="text-secondary small">Supply manager</div>
+                <div class="fs-5 fw-semibold">@ViewData["ManagerName"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <div class="text-secondary small">Available products</div>
+                <div class="fs-5 fw-semibold">@ViewData["NumberOfProducts"] items</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+        <h2 class="h5">Product list</h2>
+        <ul class="list-group list-group-flush">
+            @foreach (string product in products)
+            {
+                <li class="list-group-item px-0">@product</li>
+            }
+        </ul>
+    </div>
+</div>

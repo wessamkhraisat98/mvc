@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Supply Home";
+}
+<section class="mb-4">
+    <span class="badge text-bg-success mb-2">Student supply portal</span>
+    <h1 class="display-6 fw-bold">University Cafeteria Supplies</h1>
+    <p class="text-secondary">Browse cafeteria items, check suppliers, or send a supply request.</p>
+    <a class="btn btn-success" asp-controller="Supply" asp-action="CreateRequest">Create a request</a>
+</section>
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+                <h2 class="h4">Browse by category</h2>
+                <p class="text-secondary">Choose a category to get started.</p>
+                <ul class="list-group list-group-flush">
+                    @foreach (string category in ViewBag.Categories)
+                    {
+                        <li class="list-group-item px-0">@category</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+                <h2 class="h4">Quick links</h2>
+                <div class="d-grid gap-2">
+                    <a class="btn btn-outline-success" asp-action="Products">View products</a>
+                    <a class="btn btn-outline-success" asp-action="Suppliers">Meet our suppliers</a>
+                    <a class="btn btn-outline-secondary" asp-action="About">About the service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

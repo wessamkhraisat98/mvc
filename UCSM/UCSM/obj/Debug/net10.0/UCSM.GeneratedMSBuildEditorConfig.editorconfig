@@ -63,6 +63,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/Supply/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGx5XEFib3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/Supply/CheckQuantity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGx5XENoZWNrUXVhbnRpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/Supply/CreateRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGx5XENyZWF0ZVJlcXVlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/Supply/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGx5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/Supply/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGx5XFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/Supply/Suppliers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGx5XFN1cHBsaWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/mvc/UCSM/UCSM/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,101 @@
+@{
+    ViewData["Title"] = "Create Supply Request";
+    string[] products = (string[])ViewBag.Products;
+}
+<h1 class="h2 fw-bold">Create a supply request</h1>
+<p class="text-secondary mb-4">Enter the request details. Fields marked required must be completed.</p>
+<div class="card border-0 shadow-sm" style="max-width: 720px;">
+    <div class="card-body p-4 p-md-5">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        <form asp-controller="Supply" asp-action="SubmitRequest" method="post" id="supplyRequestForm">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label for="EmployeeName" class="form-label">
+                    Employee name <span class="text-danger">*</span>
+                </label>
+                <input class="form-control"
+                       id="EmployeeName"
+                       name="EmployeeName"
+                       type="text"
+                       value="@ViewBag.EmployeeName"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label for="ProductName" class="form-label">
+                    Product <span class="text-danger">*</span>
+                </label>
+                <select class="form-select" id="ProductName" name="ProductName" required>
+                    <option value="">Choose a product</option>
+                    @foreach (string product in products)
+                    {
+                        <option value="@product" selected="@(ViewBag.ProductName?.ToString() == product)">
+                            @product
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-6 mb-3">
+                    <label for="Quantity" class="form-label">
+                        Quantity <span class="text-danger">*</span>
+                    </label>
+                    <input class="form-control"
+                           id="Quantity"
+                           name="Quantity"
+                           type="number"
+                           min="1"
+                           step="1"
+                           value="@ViewBag.Quantity"
+                           required />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="RequiredDate" class="form-label">
+                        Required date <span class="text-danger">*</span>
+                    </label>
+                    <input class="form-control"
+                           id="RequiredDate"
+                           name="RequiredDate"
+                           type="date"
+                           value="@ViewBag.RequiredDate"
+                           required />
+                </div>
+            </div>
+
+            <div id="quantityClassification"
+                 class="alert alert-info d-none"
+                 role="status"
+                 aria-live="polite"></div>
+
+            <div class="d-flex flex-wrap gap-2">
+                <button type="submit" class="btn btn-success">Submit request</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        const quantityInput = document.getElementById('Quantity');
+        const classification = document.getElementById('quantityClassification');
+        quantityInput.addEventListener('input', () => {
+            const quantity = Number(quantityInput.value);
+            if (!quantity || quantity < 1) {
+                classification.classList.add('d-none');
+                return;
+            }
+            const label = quantity < 20 ? 'Small Order' : quantity <= 50 ? 'Medium Order' : 'Large Order';
+            classification.textContent = `Order size: ${label}`;
+            classification.classList.remove('d-none');
+        });
+    </script>
+}

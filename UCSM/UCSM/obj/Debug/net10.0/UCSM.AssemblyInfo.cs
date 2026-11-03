@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UCSM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e0ab9b7fb5e23cc81427a48fecf76e5fc2ffedb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb12e67b02b07b7f4e2b7bd56e06876923109436")]
 [assembly: System.Reflection.AssemblyProductAttribute("UCSM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UCSM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

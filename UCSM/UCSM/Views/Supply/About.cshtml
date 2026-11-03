@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Request Submitted";
+}
+<div class="card border-0 shadow-sm" style="max-width: 720px;">
+    <div class="card-body p-4 p-md-5">
+        <div class="display-6 text-success mb-3" aria-hidden="true">✓</div>
+        <h1 class="h2 fw-bold">Request update</h1>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success mt-3" role="status">
+                @TempData["Message"]
+            </div>
+        }
+
+        <p class="text-secondary">
+            You can return to the supply portal or submit another request.
+        </p>
+        <a class="btn btn-success" asp-action="Index">Back to supply home</a>
+        <a class="btn btn-outline-success ms-2" asp-action="CreateRequest">New request</a>
+    </div>
+</div>

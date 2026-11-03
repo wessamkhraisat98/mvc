@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Our Suppliers";
+    string[] suppliers = (string[])ViewBag.Suppliers;
+}
+<h1 class="h2 fw-bold mb-2">@ViewBag.Title</h1>
+<p class="text-secondary mb-4">We work with @ViewBag.NumberOfSuppliers trusted suppliers.</p>
+<div class="row g-3">
+    @foreach (string supplier in suppliers)
+    {
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                    <div class="text-success small fw-semibold mb-2">SUPPLY PARTNER</div>
+                    <h2 class="h5 mb-0">@supplier</h2>
+                </div>
+            </div>
+        </div>
+    }
+</div>
