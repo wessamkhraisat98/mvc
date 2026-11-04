@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "My Supply Requests";
+    var requests = ViewBag.Requests as List<UCSM.Controllers.SupplyRequestController.ConfirmedSupplyRequest>;
+}
+
+<h1 class="h2 fw-bold">My supply requests</h1>
+<p class="text-secondary mb-4">Confirmed requests in this session.</p>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="status">@TempData["Message"]</div>
+}
+
+@if (requests == null || requests.Count == 0)
+{
+    <div class="alert alert-light border">There are no confirmed requests yet.</div>
+}
+else
+{
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <div class="table-responsive">
+                <table class="table table-striped align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Products</th>
+                            <th>Subtotal</th>
+                            <th>Preparation fee</th>
+                            <th>Discount</th>
+                            <th>Final total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var request in requests)
+                        {
+                            <tr>
+                                <td>@request.RequestId</td>
+                                <td>@request.NumberOfProducts</td>
+                                <td>@request.Subtotal.ToString("0.00") JD</td>
+                                <td>@request.PreparationFee.ToString("0.00") JD</td>
+                                <td>@request.Discount.ToString("0.00") JD</td>
+                                <td class="fw-semibold">@request.FinalTotal.ToString("0.00") JD</td>
+                                <td><span class="badge text-bg-success">@request.Status</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}

@@ -2,7 +2,6 @@ C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\appsettings.Development.js
 C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\appsettings.json
 C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\UCSM.staticwebassets.runtime.json
 C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\UCSM.staticwebassets.endpoints.json
-C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\UCSM.exe
 C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\UCSM.deps.json
 C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\UCSM.runtimeconfig.json
 C:\Users\user\Desktop\mvc\UCSM\UCSM\bin\Debug\net10.0\UCSM.dll
@@ -97,5 +96,3 @@ C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.genruntimeconfig.cach
 C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\ref\UCSM.dll
 C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.sourcelink.json
 C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\compressed\ebcrvi4u5l-{0}-4s0929aun4-4s0929aun4.gz
-C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-C:\Users\user\Desktop\mvc\UCSM\UCSM\obj\Debug\net10.0\UCSM.csproj.Up2Date

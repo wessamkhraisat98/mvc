@@ -13,11 +13,13 @@
             <div class="container">
                 <a class="navbar-brand" asp-controller="Supply" asp-action="Index">University Cafeteria</a>
                 <div class="navbar-nav">
-                    <a class="nav-link" asp-controller="Supply" asp-action="Index">Home</a>
-                    <a class="nav-link" asp-controller="Supply" asp-action="Products">Products</a>
-                    <a class="nav-link" asp-controller="Supply" asp-action="Suppliers">Suppliers</a>
-                    <a class="nav-link" asp-controller="Supply" asp-action="CreateRequest">Create Request</a>
-                    <a class="nav-link" asp-controller="Supply" asp-action="About">About</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Supply")">Home</a>
+                    <a class="nav-link" href="@Url.Action("Products", "Supply")">Products</a>
+                    <a class="nav-link" href="@Url.Action("Suppliers", "Supply")">Suppliers</a>
+                    <a class="nav-link" href="@Url.Action("Index", "SupplyRequest")">Create Supply Request</a>
+                    <a class="nav-link" href="@Url.Action("Review", "SupplyRequest")">Review Draft</a>
+                    <a class="nav-link" href="@Url.Action("MyRequests", "SupplyRequest")">My Requests</a>
+                    <a class="nav-link" href="@Url.Action("About", "SupplyRequest")">About</a>
                 </div>
             </div>
         </nav>

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\controllers\\supplycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\controllers\\supplycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|c:\\users\\user\\desktop\\mvc\\ucsm\\ucsm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CADDD6A-C2FD-4BCD-1E3E-096F04D5D633}|UCSM\\UCSM.csproj|solutionrelative:ucsm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SupplyController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\SupplyController.cs",
+              "RelativeDocumentMoniker": "UCSM\\Controllers\\SupplyController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\SupplyController.cs",
+              "RelativeToolTip": "UCSM\\Controllers\\SupplyController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T11:38:54.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "UCSM\\Views\\Shared\\_Layout.cshtml",
@@ -38,25 +55,24 @@
               "RelativeToolTip": "UCSM\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-01T11:18:07.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-01T11:18:07.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Program.cs",
               "RelativeDocumentMoniker": "UCSM\\Program.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Program.cs",
               "RelativeToolTip": "UCSM\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-01T11:17:33.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Views\\Cafeteria\\index.cshtml",
               "RelativeDocumentMoniker": "UCSM\\Views\\Cafeteria\\index.cshtml",
@@ -68,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CafeteriaController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\mvc\\UCSM\\UCSM\\Controllers\\CafeteriaController.cs",
               "RelativeDocumentMoniker": "UCSM\\Controllers\\CafeteriaController.cs",

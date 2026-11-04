@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Review Supply Request";
+    var items = ViewBag.Items as List<UCSM.Controllers.SupplyRequestController.SupplyRequestItem>;
+}
+
+<h1 class="h2 fw-bold">Review your request</h1>
+<p class="text-secondary mb-4">Check the products and totals before confirming.</p>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+        <div class="table-responsive">
+            <table class="table table-striped align-middle">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Unit price</th>
+                        <th>Priority</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in items!)
+                    {
+                        <tr>
+                            <td>@item.ProductName</td>
+                            <td>@item.Category</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.UnitPrice.ToString("0.00") JD</td>
+                            <td>@item.Priority</td>
+                            <td>@item.TotalCost.ToString("0.00") JD</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row justify-content-end">
+            <div class="col-md-6 col-lg-4">
+                <dl class="row mb-4">
+                    <dt class="col-7">Subtotal</dt>
+                    <dd class="col-5 text-end">@((decimal)ViewBag.Subtotal).ToString("0.00") JD</dd>
+                    <dt class="col-7">Preparation fee</dt>
+                    <dd class="col-5 text-end">@((decimal)ViewBag.PreparationFee).ToString("0.00") JD</dd>
+                    <dt class="col-7">Discount</dt>
+                    <dd class="col-5 text-end">@((decimal)ViewBag.Discount).ToString("0.00") JD</dd>
+                    <dt class="col-7 fs-5">Final total</dt>
+                    <dd class="col-5 text-end fs-5 fw-bold">@((decimal)ViewBag.FinalTotal).ToString("0.00") JD</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+            <form asp-controller="SupplyRequest" asp-action="ConfirmRequest" method="post">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-success">Confirm request</button>
+            </form>
+            <a class="btn btn-outline-secondary" asp-controller="SupplyRequest" asp-action="Index">Back to draft</a>
+        </div>
+    </div>
+</div>
