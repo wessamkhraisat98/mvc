@@ -1,0 +1,20 @@
+@model List<Supplier>
+@{
+    ViewData["Title"] = "Create Purchase Order";
+}
+
+<h1>Create Purchase Order</h1>
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label for="supplierId" class="form-label">Supplier</label>
+        <select id="supplierId" name="supplierId" class="form-select" required>
+            <option value="">Select a supplier</option>
+            @foreach (var supplier in Model)
+            {
+                <option value="@supplier.Id">@supplier.Name</option>
+            }
+        </select>
+    </div>
+    <button class="btn btn-primary">Create order</button>
+</form>

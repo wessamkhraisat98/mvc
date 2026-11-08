@@ -6,7 +6,9 @@ namespace UCSM.Controllers
     public class SupplyRequestController : Controller
     {
         private const string DraftSessionKey = "SupplyRequestDraft";
-        private const string ConfirmedRequestsKey = "ConfirmedSupplyRequests";
+        private static readonly List<ConfirmedSupplyRequest> ConfirmedRequests = new();
+
+        private const string PreferredPriorityCookieName = "PreferredPriority";
 
         private static readonly string[] ProductOptions =
         {
@@ -20,8 +22,8 @@ namespace UCSM.Controllers
         public IActionResult Index()
         {
             ViewBag.Products = ProductOptions;
-            ViewBag.PreferredPriority = Request.Cookies["PreferredPriority"] ?? "Normal";
-            ViewBag.PreferenceMessage = Request.Cookies["PreferredPriority"] is string priority
+            ViewBag.PreferredPriority = Request.Cookies[PreferredPriorityCookieName] ?? "Normal";
+            ViewBag.PreferenceMessage = Request.Cookies[PreferredPriorityCookieName] is string priority
                 ? $"Your preferred request priority is {priority}."
                 : null;
             ViewBag.DraftItems = GetDraftItems();
@@ -87,9 +89,7 @@ namespace UCSM.Controllers
             decimal subtotal = items.Sum(item => item.TotalCost);
             decimal preparationFee = CalculatePreparationFee(items);
             decimal discount = CalculateDiscount(subtotal);
-            List<ConfirmedSupplyRequest> requests = GetConfirmedRequests();
-
-            requests.Add(new ConfirmedSupplyRequest
+            ConfirmedRequests.Add(new ConfirmedSupplyRequest
             {
                 RequestId = Guid.NewGuid().ToString("N")[..8].ToUpperInvariant(),
                 NumberOfProducts = items.Count,
@@ -100,7 +100,6 @@ namespace UCSM.Controllers
                 Status = "Confirmed"
             });
 
-            HttpContext.Session.SetString(ConfirmedRequestsKey, JsonSerializer.Serialize(requests));
             HttpContext.Session.Remove(DraftSessionKey);
             TempData["Message"] = "The supply request has been confirmed.";
             return RedirectToAction(nameof(MyRequests));
@@ -125,7 +124,7 @@ namespace UCSM.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            Response.Cookies.Append("PreferredPriority", priority, new CookieOptions
+            Response.Cookies.Append(PreferredPriorityCookieName, priority, new CookieOptions
             {
                 Expires = DateTimeOffset.UtcNow.AddDays(7),
                 HttpOnly = true,
@@ -140,7 +139,7 @@ namespace UCSM.Controllers
 
         public IActionResult MyRequests()
         {
-            ViewBag.Requests = GetConfirmedRequests();
+            ViewBag.Requests = ConfirmedRequests;
             return View();
         }
 
@@ -162,19 +161,9 @@ namespace UCSM.Controllers
             HttpContext.Session.SetString(DraftSessionKey, JsonSerializer.Serialize(items));
         }
 
-        private List<ConfirmedSupplyRequest> GetConfirmedRequests()
-        {
-            string? json = HttpContext.Session.GetString(ConfirmedRequestsKey);
-            return string.IsNullOrEmpty(json)
-                ? new List<ConfirmedSupplyRequest>()
-                : JsonSerializer.Deserialize<List<ConfirmedSupplyRequest>>(json) ?? new List<ConfirmedSupplyRequest>();
-        }
-
         private static decimal CalculatePreparationFee(List<SupplyRequestItem> items)
         {
-            string priority = items.Any(item => item.Priority == "Emergency")
-                ? "Emergency"
-                : items.Any(item => item.Priority == "Urgent") ? "Urgent" : "Normal";
+            string priority = items[0].Priority;
 
             return priority switch
             {

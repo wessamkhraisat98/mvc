@@ -1,0 +1,64 @@
+@model PurchaseOrder
+@{
+    ViewData["Title"] = "Purchase Order";
+    var products = (List<Product>)ViewBag.Products;
+}
+
+<h1>Purchase Order #@Model.Id</h1>
+<p>Supplier: @Model.Supplier?.Name | Status: @Model.Status</p>
+
+@if (TempData["Error"] is string error)
+{
+    <p class="alert alert-warning">@error</p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Product?.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.UnitPrice.ToString("0.00")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p><strong>Order total:</strong> @(((decimal)ViewBag.Total).ToString("0.00"))</p>
+
+@if (Model.Status == "Pending")
+{
+    <form asp-action="AddItem" asp-route-id="@Model.Id" method="post" class="mb-3">
+        <div class="mb-3">
+            <label for="productId" class="form-label">Product</label>
+            <select id="productId" name="productId" class="form-select" required>
+                <option value="">Select a product</option>
+                @foreach (var product in products)
+                {
+                    <option value="@product.Id">@product.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input id="quantity" name="quantity" type="number" min="1" class="form-control" required />
+        </div>
+        <button class="btn btn-primary">Add product</button>
+    </form>
+
+    @if (Model.Items.Count > 0)
+    {
+        <form asp-action="Receive" asp-route-id="@Model.Id" method="post">
+            <button class="btn btn-success">Receive order and update stock</button>
+        </form>
+    }
+}
+
+<a asp-action="Index">Back to orders</a>

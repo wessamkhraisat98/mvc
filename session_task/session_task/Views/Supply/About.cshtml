@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">About Application</h2>
+        </div>
+
+        <div class="card-body">
+
+            <h4>Application Name</h4>
+            <p>
+                Academy Graduation Ceremony
+                Preparation Management System
+            </p>
+
+            <hr />
+
+            <h4>Feature Name</h4>
+            <p>
+                Graduation Supply Management
+            </p>
+
+            <hr />
+
+            <h4>Description</h4>
+            <p>
+                This application helps Orange Coding Academy
+                employees view suppliers and offers, select
+                graduation ceremony supplies, calculate costs,
+                and review their requests.
+            </p>
+
+            <hr />
+
+            <div class="text-center mt-4">
+
+                <a href="@Url.Action("Index", "Supply")"
+                   class="btn btn-primary">
+                    Back to Create Supply Request
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

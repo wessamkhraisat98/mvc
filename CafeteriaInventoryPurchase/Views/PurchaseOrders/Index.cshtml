@@ -1,0 +1,29 @@
+@model List<PurchaseOrder>
+@{
+    ViewData["Title"] = "Purchase Orders";
+}
+
+<h1>Purchase Orders</h1>
+<a class="btn btn-primary mb-3" asp-action="Create">Create purchase order</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order</th>
+            <th>Date</th>
+            <th>Supplier</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td><a asp-action="Details" asp-route-id="@order.Id">#@order.Id</a></td>
+                <td>@order.OrderDate.ToString("yyyy-MM-dd")</td>
+                <td>@order.Supplier?.Name</td>
+                <td>@order.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>

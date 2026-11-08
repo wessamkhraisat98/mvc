@@ -40,13 +40,13 @@
             <div class="col-md-6 col-lg-4">
                 <dl class="row mb-4">
                     <dt class="col-7">Subtotal</dt>
-                    <dd class="col-5 text-end">@((decimal)ViewBag.Subtotal).ToString("0.00") JD</dd>
+                    <dd class="col-5 text-end">@(((decimal)ViewBag.Subtotal).ToString("0.00")) JD</dd>
                     <dt class="col-7">Preparation fee</dt>
-                    <dd class="col-5 text-end">@((decimal)ViewBag.PreparationFee).ToString("0.00") JD</dd>
+                    <dd class="col-5 text-end">@(((decimal)ViewBag.PreparationFee).ToString("0.00")) JD</dd>
                     <dt class="col-7">Discount</dt>
-                    <dd class="col-5 text-end">@((decimal)ViewBag.Discount).ToString("0.00") JD</dd>
+                    <dd class="col-5 text-end">@(((decimal)ViewBag.Discount).ToString("0.00")) JD</dd>
                     <dt class="col-7 fs-5">Final total</dt>
-                    <dd class="col-5 text-end fs-5 fw-bold">@((decimal)ViewBag.FinalTotal).ToString("0.00") JD</dd>
+                    <dd class="col-5 text-end fs-5 fw-bold">@(((decimal)ViewBag.FinalTotal).ToString("0.00")) JD</dd>
                 </dl>
             </div>
         </div>

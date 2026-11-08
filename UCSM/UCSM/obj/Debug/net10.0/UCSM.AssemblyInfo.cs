@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UCSM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83bd73bca29e8206deea2ff0e43dcfc058012a17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5e2bf6a2f38e756cfea3222452a8d8384d89c09")]
 [assembly: System.Reflection.AssemblyProductAttribute("UCSM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UCSM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

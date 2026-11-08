@@ -1,0 +1,143 @@
+﻿
+@using session_task.Models
+
+@{
+    ViewData["Title"] = "Review Supply Request";
+
+    List<Category> categories = ViewBag.Categories;
+    List<Supplier> suppliers = ViewBag.Suppliers;
+    List<Offer> selectedOffers = ViewBag.SelectedOffers;
+
+    Dictionary<int, decimal> offerTotals = ViewBag.OfferTotals;
+
+    decimal totalPrice = ViewBag.TotalPrice;
+    decimal discountPercentage = ViewBag.DiscountPercentage;
+    decimal discountAmount = ViewBag.DiscountAmount;
+    decimal finalTotal = ViewBag.FinalTotal;
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-5">
+        <h1>Review Supply Request</h1>
+        <p class="text-muted">
+            Academy Graduation Ceremony Preparation
+        </p>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Selected Offers</h4>
+        </div>
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped">
+
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Category</th>
+                            <th>Supplier</th>
+                            <th>Offer Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var offer in selectedOffers)
+                        {
+                            var supplier = suppliers.FirstOrDefault(
+                                s => s.Id == offer.SupplierId);
+
+                            var category = categories.FirstOrDefault(
+                                c => c.Id == supplier?.CategoryId);
+
+                            <tr>
+                                <td>@category?.Name</td>
+
+                                <td>@supplier?.Name</td>
+
+                                <td>@offer.Name</td>
+
+                                <td>@offer.Quantity</td>
+
+                                <td>
+                                    @offer.UnitPrice.ToString("0.00") JD
+                                </td>
+
+                                <td>
+                                    @offerTotals[offer.Id].ToString("0.00") JD
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Cost Summary</h4>
+        </div>
+
+        <div class="card-body">
+
+            <table class="table">
+
+                <tr>
+                    <th>Total Price</th>
+                    <td class="text-end">
+                        @totalPrice.ToString("0.00") JD
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Discount Percentage</th>
+                    <td class="text-end">
+                        @discountPercentage.ToString("0.##")%
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Discount Amount</th>
+                    <td class="text-end">
+                        @discountAmount.ToString("0.00") JD
+                    </td>
+                </tr>
+
+                <tr class="table-success">
+                    <th>Final Total</th>
+                    <th class="text-end">
+                        @finalTotal.ToString("0.00") JD
+                    </th>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="text-center mb-5">
+
+        <a href="@Url.Action("Index", "Supply")"
+           class="btn btn-primary btn-lg">
+            Back to Offers
+        </a>
+
+    </div>
+
+</div>

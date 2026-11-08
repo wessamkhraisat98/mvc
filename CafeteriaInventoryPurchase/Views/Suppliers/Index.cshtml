@@ -1,0 +1,39 @@
+@model List<Supplier>
+@{
+    ViewData["Title"] = "Suppliers";
+}
+
+<h1>Suppliers</h1>
+<a class="btn btn-primary mb-3" asp-action="Edit">Add supplier</a>
+
+@if (TempData["Error"] is string error)
+{
+    <p class="alert alert-warning">@error</p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.Name</td>
+                <td>@record.Email</td>
+                <td>@record.Phone</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@record.Id">Edit</a>
+                    <form asp-action="Delete" method="post" class="d-inline">
+                        <button class="btn btn-sm btn-outline-danger" name="id" value="@record.Id">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
